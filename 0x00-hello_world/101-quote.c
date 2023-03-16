@@ -8,6 +8,6 @@ int main(void)
 {
 	char art[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(2, art, 59);
+	write(STDOUT_FILENO, art, 59);
 	return (1);
 }
