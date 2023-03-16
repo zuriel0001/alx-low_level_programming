@@ -2,7 +2,7 @@
 /**
  * main - Using printf command to print a file line
  *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
