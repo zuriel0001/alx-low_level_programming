@@ -9,7 +9,7 @@ int main(void)
 	char art[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 	int len = sizeof(art) / sizeof(char);
 
-	write(STDERR_FILENO, art, len);
+	write(2, art, len);
 	return (1);
 }
 
