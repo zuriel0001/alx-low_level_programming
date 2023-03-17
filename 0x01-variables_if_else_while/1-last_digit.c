@@ -1,8 +1,8 @@
-#include <stdio>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Determine last digut of a random number and compare it to other number
+ * main - Determine last digit  of a random num.  and compare it to other number
  *
  * Return: Always (0) Succes
  */
@@ -13,7 +13,7 @@ int main(void)
 	srand(time(NULL))
 	n = rand() - RAND_MAX / 2;
 	last_digit = n % 10;
-	
+
 	if (last_digit > 5)
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
