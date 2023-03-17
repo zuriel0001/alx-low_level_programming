@@ -9,7 +9,7 @@ int main(void)
 	char alpbt;
 
 	alpbt = 'a';
-	while (alpbt <= 'z' && alpbt != 'q' && alpbt != 'e')
+	while (alpbt <= 'z')
 	{
 		putchar(alpbt);
 		alpbt++;
