@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Printing alphabets
  *
@@ -9,10 +10,11 @@ int main(void)
 	char alpbt;
 
 	alpbt = 'a';
-	while (aplbt = a, a <= z, a++)
+	while (alpbt >= 'a' && alpbt <= 'z')
 	{
-		putchar("%c\n", alpbt);
+		putchar(alpbt);
+		putchar('\n');
+		alpbt++;
 	}
 	return (0);
-
 }
