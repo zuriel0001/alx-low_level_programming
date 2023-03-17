@@ -11,8 +11,11 @@ int main(void)
 	alpbt = 'a';
 	while (alpbt <= 'z')
 	{
-		putchar(alpbt);
-		alpbt++;
+		if (alpbt != 'q' && alpbt != 'e')
+		{
+			putchar(alpbt);
+			alpbt++;
+		}
 	}
 	putchar('\n');
 	return (0);
