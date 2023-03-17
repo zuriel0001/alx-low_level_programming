@@ -28,9 +28,9 @@ int main(void)
 					putchar(' ');
 				}
 			}
-			i++;
+			J++;
 		}
-		j++;
+		i++;
 	}
 	return (0);
 }
