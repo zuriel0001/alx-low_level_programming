@@ -13,6 +13,6 @@ int main(void)
 		putchar(alpbt);
 		alpbt--;
 	}
-	putchar('\n')
+	putchar('\n');
 	return (0);
 }
