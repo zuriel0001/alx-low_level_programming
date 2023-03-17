@@ -13,8 +13,8 @@ int main(void)
 	while (alpbt >= 'a' && alpbt <= 'z')
 	{
 		putchar(alpbt);
-		putchar('\t');
 		alpbt++;
-	}
+	}       
+        putchar('\n');
 	return (0);
 }
