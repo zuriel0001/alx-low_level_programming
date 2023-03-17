@@ -4,7 +4,7 @@
  *
  * Return: Always 0 (Success)
  */
-in main(void)
+int main(void)
 {
 	char low, up;
 
@@ -13,7 +13,7 @@ in main(void)
 	while (low <= 'z' && up <= 'Z')
 	{
 		putchar(low);
-		la++;
+		low++;
 		putchar(up);
 		up++;
 	}
