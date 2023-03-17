@@ -12,7 +12,7 @@ int main(void)
 	while (alpbt <= 'z' && alpbt != 'q', 'e')
 	{
 		putchar(alpbt);
-		alpbt++
+		alpbt++;
 	}
 	putchar('\n');
 	return (0);
