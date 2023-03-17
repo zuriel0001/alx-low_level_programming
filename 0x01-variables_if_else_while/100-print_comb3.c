@@ -4,33 +4,22 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int main(0)
 {
 	int i, j;
 
-	i = 0;
-	j = 0;
-	while (i <= 9)
+	for (i = 0; i < 10; i++)
 	{
-		while (j < 9)
+		for (j = i + 1; j < 10; j++)
 		{
-			if (!(i > j && j == i))
+			putchar(i + '0');
+			putchar(j + '0');
+			if (i != 8 || j != 9)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i == 8 && j == 8)
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
-			j++;
 		}
-		i++;
 	}
 	return (0);
 }
