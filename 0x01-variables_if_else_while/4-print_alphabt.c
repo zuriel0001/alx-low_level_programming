@@ -14,7 +14,8 @@ int main(void)
 		if (alpbt != 'q' && alpbt != 'e')
 		{
 			putchar(alpbt);
-		}alpbt++;
+		}
+		alpbt++;
 	}
 	putchar('\n');
 	return (0);
