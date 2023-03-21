@@ -20,6 +20,7 @@ void print_to_98(int n)
 				_putchar(' ');
 			}
 		}
+	}
 	else
 	{
 		for (; n <= 98; n++)
@@ -32,5 +33,6 @@ void print_to_98(int n)
 				_putchar(' ');
 			}
 		}
+	}
 	_putchar('\n');
 }
