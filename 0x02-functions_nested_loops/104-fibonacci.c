@@ -8,8 +8,9 @@ int main(void)
 {
 	int prev = 1;
 	int curr = 2;
+	int i;
 
-	for (int i = 3; i <= 98; i++)
+	for (i = 3; i <= 98; i++)
 	{
 		int next_term = prev + curr;
 
