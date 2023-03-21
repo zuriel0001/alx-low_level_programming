@@ -10,7 +10,7 @@ int main(void)
 	int curr = 2;
 	int i;
 
-	for (i = 3; i <= 98; i++)
+	for (i = 1; i <= 98; i++)
 	{
 		int next_term = prev + curr;
 
