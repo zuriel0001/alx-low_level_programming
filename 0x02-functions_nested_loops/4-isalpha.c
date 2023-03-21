@@ -6,7 +6,7 @@
  *
  * Return: 1 for lowercase, 0 for uppercase
  */
-int _isalpha(int c);
+int _isalpha(int c)
 {
 	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
 	{
