@@ -18,6 +18,5 @@ int _abs(int n)
 	{
 		cal = (n * -1);
 	}
-	_putchar('\n');
 	return (cal);
 }
