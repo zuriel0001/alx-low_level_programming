@@ -13,7 +13,7 @@ int main(void)
 
 	printf("%u, %u", prev, curr);
 
-	for (i = 3; i <= 96; i++)
+	for (i = 3; i <= 98; i++)
 	{
 		unsigned int next_term = prev + curr;
 
