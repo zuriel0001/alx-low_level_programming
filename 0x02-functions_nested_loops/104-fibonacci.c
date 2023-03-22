@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	int prev = 1;
-	int curr = 2;
-	int i;
+	long int prev = 1;
+	long int curr = 2;
+	long int i;
 
-	printf("%d, %d", prev, curr);
+	printf("%ld, %ld", prev, curr);
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -18,7 +18,7 @@ int main(void)
 
 		prev = curr;
 		curr = next_term;
-		printf(", %d", curr);
+		printf(", %ld", curr);
 	}
 	printf("\n");
 	return (0);
