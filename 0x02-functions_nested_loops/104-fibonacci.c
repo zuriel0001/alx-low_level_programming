@@ -6,19 +6,19 @@
  */
 int main(void)
 {
-	long int prev = 1;
-	long int curr = 2;
-	long int i;
+	unsigned int prev = 1;
+	unsigned int curr = 2;
+	unsigned int i;
 
-	printf("%ld, %ld", prev, curr);
+	printf("%u, %u", prev, curr);
 
 	for (i = 3; i <= 98; i++)
 	{
-		int next_term = prev + curr;
+		unsigned int next_term = prev + curr;
 
 		prev = curr;
 		curr = next_term;
-		printf(", %ld", curr);
+		printf(", %u", curr);
 	}
 	printf("\n");
 	return (0);
