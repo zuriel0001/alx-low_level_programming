@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-	unsigned int prev = 1;
-	unsigned int curr = 2;
-	unsigned int i;
+	unsigned long prev = 1;
+	unsigned long curr = 2;
+	unsigned long i;
 
-	printf("%u, %u", prev, curr);
+	printf("%lu, %lu", prev, curr);
 
 	for (i = 3; i <= 98; i++)
 	{
-		unsigned int next_term = prev + curr;
+		unsigned long next_term = prev + curr;
 
 		prev = curr;
 		curr = next_term;
-		printf(", %u", curr);
+		printf(", %lu", curr);
 	}
 	printf("\n");
 	return (0);
