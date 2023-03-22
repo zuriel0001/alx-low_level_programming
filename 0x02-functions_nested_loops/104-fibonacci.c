@@ -1,4 +1,5 @@
 #include <stdio.h>
+##include <limits.h>
 /**
  * main - loop to generate the first 98 Fibonacci numbers
  *
