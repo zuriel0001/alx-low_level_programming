@@ -2,6 +2,8 @@
 /**
  * print_times_table - prints the n times table btn 0 and 15
  *
+ *@n: intergers between 0 and 15
+ *
  * Return: 0 Success. 1 values below 0 and avove 15
  */
 void print_times_table(int n)
@@ -16,7 +18,7 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			printf("%4d", i * j);
+			printf("%4d, ", i * j);
 		}
 		printf("\n");
 	}
