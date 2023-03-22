@@ -13,7 +13,6 @@ int main(void)
 	for (i = 3; i <= 50; i++)
 	{
 		c = a + b;
-
 		a = b;
 		b = c;
 		printf(", %lld", b);
