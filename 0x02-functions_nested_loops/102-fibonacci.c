@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	long long a = 1, b =2, c, i;
+	long int a = 1, b =2, c, i;
 
-	printf("%lld, %lld", a, b);
+	printf("%ld, %ld", a, b);
 
 	for (i = 3; i <= 50; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		printf(", %lld", b);
+		printf(", %ld", b);
 	}
 	printf("\n");
 	return (0);
