@@ -1,15 +1,16 @@
 #include "main.h"
 /**
- * add - add two integers and return the result
+ * mul - add two integers and return the result
  *
  * @a: first integer
  * @b: 2nd integer
  *
- * Return: Sum
+ * Return: pdt
  */
 int mul(int a, int b)
 {
-	int pdt = a * b;
+	int product;
 
-	return (pdt);
+	product = a * b;
+	return (product);
 }
