@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main - Entry point
  *
@@ -26,7 +25,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%s ", a);
+			printf("%d", a);
 		}
 	}
 	return (0);
