@@ -22,7 +22,7 @@ int main(void)
 			fr1 = fr2, fr2 = z;
 			prev = curr;
 			curr = y;
-			printf("%lu%010lu", fr2, bk2);
+			printf("%lu%010lu", fr2, curr);
 		}
 		else
 		{
