@@ -7,19 +7,40 @@
  */
 int main(void)
 {
-	unsigned long prev = 1;
-	unsigned long curr = 2;
-	unsigned long i;
+	int count;
+	unsigned long prev = 1, curr = 2, next_term = 0;
+	unsigned long w, x, y, z;
+	unsigned long m, n;
 
 	printf("%lu, %lu", prev, curr);
 
-	for (i = 3; i <= 98; i++)
+	for (count = 0; i < 92; count++)
 	{
-		unsigned long next_term = prev + curr;
-
+		next_term = prev + curr;
 		prev = curr;
 		curr = next_term;
 		printf(", %lu", curr);
+	}
+	w = prev / 10000000000;
+	x = prev % 10000000000;
+	y = curr / 10000000000;
+	z = curr % 10000000000;
+	for (count = 93; count < 99; count++)
+	{
+		m = w + y;
+		n = x + z;
+	if (x + z > 9999999999)
+	{
+		m += 1;
+		n %= 10000000000;
+	}
+	printf("%lu%lu", m, n);
+	if (count != 98)
+		printf(", ");
+	w = y;
+	x = z;
+	y = m;
+	z = n;
 	}
 	printf("\n");
 	return (0);
