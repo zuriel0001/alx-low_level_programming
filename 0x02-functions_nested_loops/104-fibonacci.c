@@ -12,6 +12,7 @@ int main(void)
 	unsigned long w, x, y, z;
 	unsigned long m, n;
 
+	printf("%lu, %lu, ", prev, curr);
 	for (count = 0; count < 92; count++)
 	{
 		next_term = prev + curr;
@@ -27,18 +28,18 @@ int main(void)
 	{
 		m = w + y;
 		n = x + z;
-	if (x + z > 9999999999)
-	{
-		m += 1;
-		n %= 10000000000;
-	}
-	printf("%lu%lu", m, n);
-	if (count != 98)
+		if (x + z > 9999999999)
+		{
+			m += 1;
+			n %= 10000000000;
+		}
+		printf("%lu%lu", m, n);
+		if (count != 98)
 		printf(", ");
-	w = y;
-	x = z;
-	y = m;
-	z = n;
+		w = y;
+		x = z;
+		y = m;
+		z = n;
 	}
 	printf("\n");
 	return (0);
