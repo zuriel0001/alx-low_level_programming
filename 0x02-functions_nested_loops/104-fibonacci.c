@@ -14,7 +14,7 @@ int main(void)
 	printf("%lu, %lu, ", prev, curr);
 	for (count = 2; count < 98; count++)
 	{
-		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
+		if (prev + curr > LARGEST || fr2 > 0 || fr1 > 0)
 		{
 			x = (prev + curr) / LARGEST;
 			y = (prev + curr) % LARGEST;
