@@ -1,46 +1,37 @@
 #include <stdio.h>
+#define LARGEST 10000000000
 /**
- * main - loop to generate the first 98 Fibonacci numbers
- *
- * Return: Alway 0 Success
+ * main - main block
+ * Description: Find and print the first 98 fib numbers starting with 1 and 2.
+ * Numbers should be coma and space separated.
+ * Return: 0
  */
 int main(void)
 {
+	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+	unsigned long int hold1, hold2, hold3;
 	int count;
-	unsigned long prev = 1, curr = 2, next_term = 0;
-	unsigned long w, x, y, z;
-	unsigned long m, n;
 
-	printf("%lu, %lu, ", prev, curr);
-	for (count = 0; count < 92; count++)
+	printf("%lu, %lu, ", bk1, bk2);
+	for (count = 2; count < 98; count++)
 	{
-		next_term = prev + curr;
-		prev = curr;
-		curr = next_term;
-		printf("%lu, ", next_term);
-	}
-	w = prev / 10000000000;
-	x = prev % 10000000000;
-	y = curr / 10000000000;
-	z = curr % 10000000000;
-	for (count = 93; count <= 98; count++)
-	{
-		m = w + y;
-		n = x + z;
-		if (n > 10000000000)
+		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
 		{
-			m += 1;
-			n -= 10000000000;
+			hold1 = (bk1 + bk2) / LARGEST;
+			hold2 = (bk1 + bk2) % LARGEST;
+			hold3 = fr1 + fr2 + hold1;
+			fr1 = fr2, fr2 = hold3;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu%010lu", fr2, bk2);
 		}
-		printf("%lu", m);
-		if (n != 0)
-			printf("%010lu", n);
-		if (count != 98)
-		printf(", ");
-		w = y;
-		x = z;
-		y = m;
-		z = n;
+		else
+		{
+			hold2 = bk1 + bk2;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu", bk2);
+		}
+		if (count != 97)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
