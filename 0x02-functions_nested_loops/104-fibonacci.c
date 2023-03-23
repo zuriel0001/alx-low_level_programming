@@ -24,7 +24,7 @@ int main(void)
 	x = prev % 10000000000;
 	y = curr / 10000000000;
 	z = curr % 10000000000;
-	for (count = 93; count < 99; count++)
+	for (count = 93; count <= 98; count++)
 	{
 		m = w + y;
 		n = x + z;
