@@ -25,7 +25,14 @@ int main(void)
 		}
 		else
 		{
-			printf("%d", a);
+			if (a == 100)
+			{
+				printf("Buzz");
+			}
+			else
+			{
+			printf("%d ", a);
+			}
 		}
 	}
 	return (0);
