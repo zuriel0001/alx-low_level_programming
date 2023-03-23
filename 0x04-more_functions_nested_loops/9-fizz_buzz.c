@@ -13,27 +13,25 @@ int main(void)
 	{
 		if (a % 15 == 0)
 		{
-			printf("%s ", k);
+			printf("%s", k);
 		}
 		else if (a % 5 == 0)
 		{
-			printf("%s ", j);
+			printf("%s", j);
 		}
 		else if (a % 3 == 0)
 		{
-			printf("%s ", i);
+			printf("%s", i);
 		}
 		else
 		{
-			if (a == 100)
-			{
-				printf("Buzz");
-			}
-			else if
-			{
-			printf("%d ", a);
-			}
+			printf("%d", a);
+		}
+		if (a != 100)
+		{
+			printf(" ");
 		}
 	}
+	prinyf("\n");
 	return (0);
 }
