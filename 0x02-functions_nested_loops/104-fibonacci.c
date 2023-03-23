@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 /**
  * main - loop to generate the first 98 Fibonacci numbers
  *
@@ -33,7 +32,9 @@ int main(void)
 			m += 1;
 			n -= 10000000000;
 		}
-		printf("%lu%lu", m, n);
+		printf("%lu", m);
+		if (n != 0)
+			printf("%010lu", n);
 		if (count != 98)
 		printf(", ");
 		w = y;
