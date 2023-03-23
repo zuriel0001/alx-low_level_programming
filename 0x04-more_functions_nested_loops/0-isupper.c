@@ -4,7 +4,7 @@
  *
  * @c: uppercase alphabets in ASCII
  *
- * Return: 1 if c is lover, 0 otherwise
+ * Return: 1 if c is upper, 0 otherwise
  *
  */
 int _isupper(int c)
@@ -15,7 +15,6 @@ int _isupper(int c)
 	}
 	else
 	{
-	return (0);
+		return (0);
 	}
-	_putchar('\n');
 }
