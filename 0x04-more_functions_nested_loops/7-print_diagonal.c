@@ -15,7 +15,7 @@ void print_diagonal(int n)
 		_putchar('\n');
 		return;
 	}
-	for (i = 1; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		for (j = 0; j < i; j++)/*The first line has 0 spaces, */
 			/*second line has 1 space, and so on, up to n-1 spaces*/
@@ -25,5 +25,4 @@ void print_diagonal(int n)
 		_putchar('\\');
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
