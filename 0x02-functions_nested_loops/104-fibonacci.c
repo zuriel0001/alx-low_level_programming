@@ -28,10 +28,10 @@ int main(void)
 	{
 		m = w + y;
 		n = x + z;
-		if (x + z > 9999999999)
+		if (n > 10000000000)
 		{
 			m += 1;
-			n %= 10000000000;
+			n -= 10000000000;
 		}
 		printf("%lu%lu", m, n);
 		if (count != 98)
