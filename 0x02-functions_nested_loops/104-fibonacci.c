@@ -15,14 +15,7 @@ int main(void)
 	printf("%lu, %lu, ", prev, curr);
 	for (count = 2; count < 98; count++)
 	{
-		if
-		{
-			next_term = prev + curr;
-			prev = curr;
-			curr = next_term;
-			printf("%lu", curr);
-		}
-		else if (prev + curr > LARGEST || fr2 > 0 || fr1 > 0)
+		if (prev + curr > LARGEST || fr2 > 0 || fr1 > 0)
 		{	
 			x = (prev + curr) / LARGEST;
 			next_term = (prev + curr) % LARGEST;
@@ -32,6 +25,14 @@ int main(void)
 			curr = next_term;
 			printf("%lu%010lu", fr2, curr);
 		}
+		else
+		{
+			next_term = prev + curr;
+			prev = curr;
+			curr = next_term;
+			printf("%lu", curr);
+		}
+			
 		if (count != 97)
 			printf(", ");
 	}
