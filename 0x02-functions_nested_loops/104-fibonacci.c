@@ -11,7 +11,7 @@ int main(void)
 	unsigned long int x, y, z;
 	int count;
 
-	printf("%lu, %lu, ", bk1, bk2);
+	printf("%lu, %lu, ", prev, curr);
 	for (count = 2; count < 98; count++)
 	{
 		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
