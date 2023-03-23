@@ -8,21 +8,21 @@
 int main(void)
 {
 	int a;
-	char i = "Fizz", j = "Buzz", k = "FizzBuzz";
+	char *i = "Fizz", *j = "Buzz", *k = "FizzBuzz";
 
-	for (a = 0; a < 100; a++)
+	for (a = 1; a <= 100; a++)
 	{
-		if (a % 3 == 0)
+		if (a % 15 == 0)
 		{
-			printf("%s ", i);
+			printf("%s ", k);
 		}
 		else if (a % 5 == 0)
 		{
 			printf("%s ", j);
 		}
-		else if (a % 15 == 0)
+		else if (a % 3 == 0)
 		{
-			printf("%s ", k);
+			printf("%s ", i);
 		}
 		else
 		{
