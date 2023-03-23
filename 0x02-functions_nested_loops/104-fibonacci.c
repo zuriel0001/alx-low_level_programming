@@ -7,8 +7,9 @@
  */
 int main(void)
 {
-	unsigned long int fr1 = 0, prev = 1, fr2 = 0, curr = 2;
-	unsigned long int x, y, z;
+	unsigned long int prev = 1, curr = 2, next_term;
+	unsigned long int fr1 = 0, fr2 = 0;
+	unsigned long int x, z;
 	int count;
 
 	printf("%lu, %lu, ", prev, curr);
@@ -17,18 +18,18 @@ int main(void)
 		if (prev + curr > LARGEST || fr2 > 0 || fr1 > 0)
 		{
 			x = (prev + curr) / LARGEST;
-			y = (prev + curr) % LARGEST;
+			next_term = (prev + curr) % LARGEST;
 			z = fr1 + fr2 + x;
 			fr1 = fr2, fr2 = z;
 			prev = curr;
-			curr = y;
+			curr = next_term;
 			printf("%lu%010lu", fr2, curr);
 		}
 		else
 		{
-			y = prev + curr;
+			next_term = prev + curr;
 			prev = curr;
-			curr = y;
+			curr = next_term;
 			printf("%lu", curr);
 		}
 		if (count != 97)
