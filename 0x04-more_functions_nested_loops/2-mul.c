@@ -2,13 +2,14 @@
 /**
  * add - add two integers and return the result
  *
- * @i: first integer
- * @j: 2nd integer
+ * @a: first integer
+ * @b: 2nd integer
  *
  * Return: Sum
  */
-int add(int a, int b)
+int mul(int a, int b)
 {
-	int sum = a + b;
-	return (sum);
+	int pdt = a * b;
+
+	return (pdt);
 }
