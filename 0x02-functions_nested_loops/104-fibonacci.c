@@ -12,14 +12,12 @@ int main(void)
 	unsigned long w, x, y, z;
 	unsigned long m, n;
 
-	printf("%lu, %lu", prev, curr);
-
 	for (count = 0; count < 92; count++)
 	{
 		next_term = prev + curr;
 		prev = curr;
 		curr = next_term;
-		printf(", %lu", curr);
+		printf("%lu, ", next_term);
 	}
 	w = prev / 10000000000;
 	x = prev % 10000000000;
