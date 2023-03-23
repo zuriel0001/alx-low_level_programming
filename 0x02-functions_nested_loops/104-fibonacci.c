@@ -1,8 +1,8 @@
 #include <stdio.h>
 #define LARGEST 10000000000
 /**
- * main -  finds and prints the first 98 Fibonacci numbers, starting with 1 and 2
- * 
+ * main -  finds &  prints the first 98 Fibonacci nums, starting with 1 and 2
+ *
  * Return: ALways 0 Success
  */
 int main(void)
@@ -16,7 +16,7 @@ int main(void)
 	for (count = 2; count < 98; count++)
 	{
 		if (prev + curr > LARGEST || fr2 > 0 || fr1 > 0)
-		{	
+		{
 			x = (prev + curr) / LARGEST;
 			next_term = (prev + curr) % LARGEST;
 			z = fr1 + fr2 + x;
@@ -32,7 +32,7 @@ int main(void)
 			curr = next_term;
 			printf("%lu", curr);
 		}
-			
+
 		if (count != 97)
 			printf(", ");
 	}
