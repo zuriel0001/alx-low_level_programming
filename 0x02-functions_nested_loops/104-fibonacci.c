@@ -14,7 +14,7 @@ int main(void)
 
 	printf("%lu, %lu", prev, curr);
 
-	for (count = 0; i < 92; count++)
+	for (count = 0; count < 92; count++)
 	{
 		next_term = prev + curr;
 		prev = curr;
