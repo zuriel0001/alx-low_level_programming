@@ -11,17 +11,19 @@
  * */
 
 	int main(void)
-{
-	/*Initialize random number generator with current time*/
-	srand(time(NULL));
+{	
+	int i;
 
 	/*Set of characters allowed in the password*/
 	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+	/*Initialize random number generator with current time*/
+	srand(time(NULL));
+
 	/*Generate random password*/
 	char password[PASSWORD_LENGTH + 1];
 
-	for (int i = 0; i < PASSWORD_LENGTH; i++)
+	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
 		/*Get a random index within the charset*/
 		int index = rand() % strlen(charset);
