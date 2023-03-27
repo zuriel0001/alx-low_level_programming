@@ -17,11 +17,11 @@
 	/*Set of characters allowed in the password*/
 	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+	 /*Generate random password*/
+	char password[PASSWORD_LENGTH + 1];
+
 	/*Initialize random number generator with current time*/
 	srand(time(NULL));
-
-	/*Generate random password*/
-	char password[PASSWORD_LENGTH + 1];
 
 	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
