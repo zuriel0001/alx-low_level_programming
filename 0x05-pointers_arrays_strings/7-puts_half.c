@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* puts_half - print half  of a string
+* puts_half - print 2nd half  of a string
 *
 * @str: string
 * Description: for odd length, len is (length - 1) / 2
