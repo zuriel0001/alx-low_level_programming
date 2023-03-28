@@ -1,41 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
-
-#define PASSWORD_LENGTH 10
 /**
  * main - Entry point
  *
  * Return: Always 0 Success
  * */
+int main() 
+{
+    int total = 2772;
+    int count = 0;
+    char password[1024];
+    int random_char;
 
-	int main(void)
-{	
-	int i;
+    srand(time(NULL)); /*Seed the random number generator*/
 
-	/*Set of characters allowed in the password*/
-	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    while (total > 122) {
+        random_char = (rand() % 125) + 1; /*Generate a random ASCII character between 1 and 125*/
+        password[count] = random_char;
+        total -= random_char;
+        count++;
+    }
 
-	 /*Generate random password*/
-	char password[PASSWORD_LENGTH + 1];
+    password[count] = total; /*Add the remaining total as the last character of the password*/
 
-	/*Initialize random number generator with current time*/
-	srand(time(NULL));
+    printf("%s\n", password); /* Output the generated password*/
 
-	for (i = 0; i < PASSWORD_LENGTH; i++)
-	{
-		/*Get a random index within the charset*/
-		int index = rand() % strlen(charset);
-
-		password[i] = charset[index];
-	}
-	/* Null-terminate the password string*/
-	password[PASSWORD_LENGTH] = '\0';
-
-	/* Print the password*/
-	printf("Random password for 101-crackme: %s\n", password);
-
-	return (0);
+    return 0;
 }
 
