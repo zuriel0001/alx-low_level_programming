@@ -2,40 +2,25 @@
 /**
 * *leet - a function that encodes a string into 1337
 *
-* @str: input string
+* @a: input value
 *
-* Return: str
+* Return: a
 */
-char *leet(char *str)
+char *leet(char *a)
 {
-	int i;
+	int i, j;
+	char str1[] = "aAeEoOtTlL";
+	char str2[] = "4433007711";
 
-	/* Iterate over the string*/
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; a[i] != '\0'; i++)
 	{
-
-		/*Check if the current character is a letter to be replaced*/
-		if (str[i] == 'a' || str[i] == 'A')
+		for (j = 0; j < 10; j++)
 		{
-			str[i] = '4';
-		}
-		else if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-		}
-		else if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		else if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		else if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
+			if (a[i] == str1[j])
+			{
+				a[i] = str2[j];
+			}
 		}
 	}
-	return (str);
+	return (n);
 }
-
