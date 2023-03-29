@@ -14,8 +14,8 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] != s2[i])
 		{
-			return (s1[i] - s2[i]);/* the difference between the ASCII values of the 
-						  two characters at the current position i
+			return (s1[i] - s2[i]);/* the difference between the ASCII values of the
+						  *two characters at the current position i
 						  */
 		}
 	}
