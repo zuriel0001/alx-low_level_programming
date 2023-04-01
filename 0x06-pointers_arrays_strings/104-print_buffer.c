@@ -32,7 +32,7 @@ void print_buffer(char *b, int size)
 		{
 			char c = b[i + j];
 
-			if (c < 32 || c > 132)
+			if (c < 32 || c > 126)
 			{
 				printf("%c", c);
 			}
