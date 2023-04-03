@@ -9,9 +9,9 @@ nclude "main.h"
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	int i;
 	
-	for (i = 0, i < n ; i++, n--)
+	for (i = ; i < n ; i++, n--)
 	{
 		s[i] = b;
 	}
