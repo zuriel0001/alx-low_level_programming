@@ -10,19 +10,17 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j;
-    
-    for (i = 0; haystack[i] != '\0'; i++)
-    {
-        for (j = 0; needle[j] != '\0'; j++)
-        {
-            if (haystack[i + j] != needle[j])
-                break;
-        }
-        
-        if (needle[j] == '\0')
-            return (haystack + i);
-    }
-    
-    return ('\0');
+	int i;
+
+	while (*s)
+	{
+		for (i = 0; accept[i]; i++)
+		{
+			if (*s == accept[i])
+				return (s);
+		}
+		s++;
+	}
+
+	return (NULL);
 }
