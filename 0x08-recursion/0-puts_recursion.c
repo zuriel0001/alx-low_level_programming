@@ -12,14 +12,12 @@ void _puts_recursion(char *s)
 	/* base case: end of string*/
 	if (*s == '\0')
 	{
+		_putchar('\n');
 		return;
 	}
-	if (*s)
-	{
 	/* print the current character*/
 	_putchar(*s);
 
 	/*call the function recursively with the next character*/
 	_puts_recursion(s + 1);
-	}
 }
