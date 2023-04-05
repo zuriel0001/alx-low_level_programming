@@ -17,8 +17,10 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		return (_prime_finder, n - 1);
+		return (_prime_finder(n, n - 1));
+	
 	}
+}
 
 /**
  * _prime_finder - determines if an integer is prime or not
@@ -39,6 +41,6 @@ int _prime_finder(int n, int any_num)
 	{
 		return (0);
 	}
-	return (_prime_finder(n, n - 1));
+	return (_prime_finder(n, any_num - 1));
 
 }
