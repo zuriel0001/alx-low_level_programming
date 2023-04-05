@@ -22,6 +22,4 @@ void _puts_recursion(char *s)
 	/*call the function recursively with the next character*/
 	_puts_recursion(s + 1);
 	}
-	else
-		_putchar('\n');
 }
