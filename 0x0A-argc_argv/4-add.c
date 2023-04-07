@@ -22,6 +22,16 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
+			/**
+			 * j is introduced to serve as a loop counter to access each character
+			 * of the current command line argument string argv[i]
+			 * for (j = 0; argv[i][j] != '\0'; j++)
+			 * could also be represented as:
+			 * char *s = argv[i];
+			 * for (j = 0; s[j] != '\0'; j++)
+			 * if (!isdigit(s[j]))
+			 */
+
 			int j;
 
 			for (j = 0; argv[i][j] != '\0'; j++)
