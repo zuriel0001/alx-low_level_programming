@@ -5,7 +5,7 @@
  * @argc: string length
  * @argv: array of string
  *
- * Return: Always 0 Success
+ * Return: Always 0 (Success)
  */
 int main(int argc, char __attribute__((unused)) *argv[])
 {
