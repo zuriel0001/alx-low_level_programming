@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - entry point
+* main - entry point _ print program name
 * @argc: length of string
 * @argv: array of strins
 * Return: name of program
