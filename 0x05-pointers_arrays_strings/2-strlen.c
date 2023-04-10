@@ -2,7 +2,7 @@
 /**
  * _strlen - a function that returns the length of a string.
  *
- * @s: char variacle pointer
+ * @s: pointer to string
  *
  * Return: i (string length)
  */
