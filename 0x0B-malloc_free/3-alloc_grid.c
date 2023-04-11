@@ -22,16 +22,20 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
+	/* Allocate memory for the rows of the grid */
 	two_dim_arr = malloc(height * sizeof(int *));
 	if (two_dim_arr == NULL)
 	{
+		/* Free allocated memory and return NULL if memory allocation fails */
 		return (NULL);
 	}
+	 /* Allocate memory for the columns of the grid and initialize to 0 */
 	for (i = 0; i < height; i++)
 	{
 		two_dim_arr[i] = malloc(sizeof(int) * width);
 		if (two_dim_arr[i] == NULL)
 		{
+			/* Free allocated memory and return NULL if memory allocation fails */
 			for (j = 0; j < i; j++)
 			{
 				free(two_dim_arr[j]);
