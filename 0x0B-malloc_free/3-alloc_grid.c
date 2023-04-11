@@ -44,7 +44,7 @@ int **alloc_grid(int width, int height)
 			two_dim_arr[i][j] = 0;
 		}
 	}
-	free(two_dim_arr);
+
 	return (two_dim_arr);
 }
 
