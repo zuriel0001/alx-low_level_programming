@@ -22,24 +22,24 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	two_dim_arr = malloc(width * sizeof(int*));
+	two_dim_arr = malloc(height * sizeof(int*));
 	if (two_dim_arr == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
 		two_dim_arr[i] = malloc(sizeof(int) * height);
 		if (two_dim_arr == NULL)
 		{
-			for (j = 0; j < height; j++)
+			for (j = 0; j < width; j++)
 			{
 				free(two_dim_arr[j]);
 			}
 			free(two_dim_arr);
 			return (NULL);
 		}
-		for (j = 0; j < height; j++)
+		for (j = 0; j < width; j++)
 		{
 			two_dim_arr[i][j] = 0;
 		}
