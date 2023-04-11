@@ -23,9 +23,10 @@ char *argstostr(int ac, char **av)
 	}
 	/* length of the resulting string */
 	for (i = 0; i < ac; i++)
-	{	for (j = 0; av[i][j]; j++)
+	{
+		for (j = 0; av[i][j]; j++)
 		{
-			len ++;
+			len++;
 		}
 		len++;
 	}
@@ -46,5 +47,6 @@ char *argstostr(int ac, char **av)
 		conct_arg[x++] = ('\n');
 	}
 	conct_arg[x] = ('\0');
-	return(conct_arg);
+
+	return (conct_arg);
 }
