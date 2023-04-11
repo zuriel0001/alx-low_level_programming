@@ -25,13 +25,15 @@ char *str_concat(char *s1, char *s2)
 	/* defining string s1 & s2 lengths. you could also use just i and j */
 
 	while (s1[i] != '\0')
+	{
 		i++;
 		s1_len++;
-
+	}
 	 while (s2[j] != '\0')
+	 {
 		 j++;
 	 	s2_len++;
-
+	 }
 	conct_str = malloc((s1_len + (s2_len + 1)) * sizeof(char));
 
 	if (conct_str == NULL)
