@@ -4,10 +4,11 @@
 /* lets define memset, a function that fills memory with a constant byte */
 
 /**
- * my_memset - a function that fill memory with constact byte
+ * my_memset- a function that fill memory with constact byte
  * @c: constact byte
  * @ptr_mem: pointer to memory to be filled
  * @n: number of times c was used
+ * Return: pointer to the function
  */
 char *my_memset(char *ptr_mem, char c, unsigned int n)
 {
