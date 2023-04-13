@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
 /* lets define memset, a function that fills memory with a constant byte */
 
 /**
