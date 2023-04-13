@@ -15,10 +15,10 @@ int *array_range(int min, int max)
 	int *ptr_arr;
 	int i, num_int;
 
-	if ( min > max)
+	if (min > max)
 		return (NULL);
 
-	num_int = max -min + 1;
+	num_int = max - min + 1;
 
 	ptr_arr = malloc(sizeof(int) * (max - min + 1));
 	/* max - min + 1 is the range OR number of integers */
