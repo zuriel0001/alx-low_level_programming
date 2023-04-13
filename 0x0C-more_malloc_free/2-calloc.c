@@ -50,6 +50,3 @@ my_memset(ptr_arr, 0, nmemb * size);
 return (ptr_arr);
 }
 
-/* lets define memset, a function that fills memory with a constant byte */
-
-
