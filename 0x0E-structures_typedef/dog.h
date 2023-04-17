@@ -7,7 +7,7 @@
  * @age: the dog's age
  * @owner: the dog owner's name
  *
- * a new type struct dog with basic info
+ * Description: new type struct dog with basic info
  */
 
 struct dog
