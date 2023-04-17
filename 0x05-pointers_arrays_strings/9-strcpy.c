@@ -2,7 +2,7 @@
 /**
  * _strcpy - copy the string pointed
  *
- * @dest: enpty array
+ * @dest: empty array
  * @src: string to be copied
  *
  * Return: pointer to destination string
