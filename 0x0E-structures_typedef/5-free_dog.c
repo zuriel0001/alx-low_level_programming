@@ -1,4 +1,4 @@
-[200~#include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "dog.h"
 
