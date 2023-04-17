@@ -64,6 +64,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if ((*d).name == NULL)
 	{
 		free(d);
+		free((*d).name);
 		return (NULL);
 	}
 
@@ -71,6 +72,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if ((*d).owner == NULL)
 	{
 		free(d);
+		free((*d).owner);
 		return (NULL);
 	}
 	_strcpy((*d).name, name);
