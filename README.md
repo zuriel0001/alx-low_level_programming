@@ -15,3 +15,10 @@ PR. ID	|PROJECT NAME |	 DESCRIPTION
 0x08	|C - Recursion	|
 0x09	|C - Static libraries	|
 0x0A	|C - argc, argv	|
+0x0B | malloc_free  |
+0x0C | more_malloc_free  |
+-
+0x0D | preprocessor |
+-
+0x0E | structures_typedef |
+-
