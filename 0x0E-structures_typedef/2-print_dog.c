@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
@@ -15,10 +16,13 @@ void print_dog(struct dog *d)
 	}
 	if (d->name == NULL)
 		d->name = "(nil)";
-	if (d->age == NULL)
-		d->age = "(nil)";
+	/**
+	 * cant asign char (nil) to float
+	 * if (!d->age)
+	 * d->age = "(nil)";
+	*/
 	if (d->owner == NULL)
-		d->Owner = "(nil)";
+		d->owner = "(nil)";
 
-	printf("Name: %d\nAge: %f\nOwner: %s\n", d->name, d->age, d->Owner);
+	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
 }
