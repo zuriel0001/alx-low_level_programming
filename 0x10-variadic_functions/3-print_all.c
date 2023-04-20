@@ -2,49 +2,44 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-
-/**
- * print_all - a function that prints anything
- * @format:  a list of types of arguments passed to the function
- * @...: variabkes passed to the function
- */
-
 void print_all(const char * const format, ...)
 {
-    va_list args;
-    va_start(args, format);
+    int i = 0;
+    char *string, *separator = "";
+    va_list list;
 
-    if (format != NULL && *format != '\0')
+    va_start(list, format);
+    if (format)
     {
-        char *s;
-        while (*format != '\0')
+        while (format[i])
         {
-            if (*format == 'c')
+            if (format[i] == 'c')
             {
-                printf("%c", va_arg(args, int));
+                printf("%s%c", separator, va_arg(list, int));
+                separator = ", ";
             }
-            else if (*format == 'i')
+            else if (format[i] == 'i')
             {
-                printf("%d", va_arg(args, int));
+                printf("%s%d", separator, va_arg(list, int));
+                separator = ", ";
             }
-            else if (*format == 'f')
+            else if (format[i] == 'f')
             {
-                printf("%f", va_arg(args, double));
+                printf("%s%f", separator, va_arg(list, double));
+                separator = ", ";
             }
-            else if (*format == 's')
+            else if (format[i] == 's')
             {
-                s = va_arg(args, char *);
-                printf("%s", s == NULL ? "(nil)" : s);
+                string = va_arg(list, char *);
+                if (!string)
+                    string = "(nil)";
+                printf("%s%s", separator, string);
+                separator = ", ";
             }
-            format++;
-            if (*format != '\0' && (*format == 'c' || *format == 'i' || *format == 'f' || *format == 's'))
-            {
-                printf(", ");
-            }
+            i++;
         }
     }
-
     printf("\n");
-    va_end(args);
-}
 
+    va_end(list);
+}
