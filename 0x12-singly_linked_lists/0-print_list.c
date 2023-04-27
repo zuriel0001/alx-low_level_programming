@@ -8,7 +8,7 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t i; /* number of nodes */
+	size_t i = 0; /* number of nodes */
 
 	for (; h; h = h->next)
 	{
