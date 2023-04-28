@@ -1,3 +1,5 @@
+/* assembly code in C **/
+
 global    main
           extern    printf
 main:
