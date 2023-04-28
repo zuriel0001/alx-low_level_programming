@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void __attribute__((constructor)) print_b4_main(void);
+
 /**
  * print_b4_main - a function to prjnt string before main
  * Return: nothing
