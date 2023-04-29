@@ -1,4 +1,4 @@
-#ifndef SINGLY_LIS_T_H
+#ifndef SINGLY_LIST_H
 #define SINGLY_LIST_H
 
 
