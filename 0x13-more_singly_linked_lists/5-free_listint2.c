@@ -16,7 +16,7 @@ void free_listint2(listint_t **head)
 	while (*head)
 	{
 		*head = node_pointer;
-		node_pointer = (*head).next;
+		node_pointer = (**head).next;
 		free(node_pointer);
 	}
 	*head = NULL;
