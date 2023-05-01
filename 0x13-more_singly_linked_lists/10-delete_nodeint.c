@@ -28,12 +28,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	for (i = 0; i < index - 1 && any_node != NULL; i++)
 	{
+		if (!any_node || !(any_node->next))
+		{
+			return (-1);
+		}
 		any_node->next = any_node->next;
-	}
-
-	if (!any_node || !(any_node->next))
-	{
-		return (-1);
 	}
 
 	new_node = any_node->next;
