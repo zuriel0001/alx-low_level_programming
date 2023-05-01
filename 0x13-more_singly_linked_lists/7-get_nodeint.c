@@ -24,5 +24,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	{
 		any_node = any_node->next;
 	}
-	return (any_node);
+
+	/* return (any_node ? any_node : NULL); */
+	if (any_node)
+		return (any_node);
+	else
+		return (NULL);
 }
