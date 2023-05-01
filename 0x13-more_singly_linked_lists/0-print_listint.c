@@ -13,7 +13,7 @@ size_t print_listint(const listint_t *h)
 {
 	size_t n_count = 0; /* number of nodes */
 
-	for (; h; h = h->next)
+	for (; h != NULL; h = h->next)
 	{
 		n_count++;
 
