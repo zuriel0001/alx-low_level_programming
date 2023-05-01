@@ -17,7 +17,10 @@ int pop_listint(listint_t **head)
 	if (*head == NULL)
 		return (0);
 
-	(**head).n = i;
+	if (!head)
+		return (0);
+
+	i = (**head).n;
 	x_node = (**head).next;
 
 	free(*head);
