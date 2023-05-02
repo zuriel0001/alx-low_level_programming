@@ -34,9 +34,8 @@ size_t get_listint_loop(const listint_t *head)
 			/*assign ptr1 to head and move ptr1 and ptr2 forward until they meet again*/
 			ptr1 = head;
 			nodes = 1;
-			while (ptr1 != ptr2)
+			for (; ptr1 != ptr2; nodes++)
 			{
-				nodes++;
 				ptr1 = ptr1->next;
 				ptr2 = ptr2->next;
 			}
