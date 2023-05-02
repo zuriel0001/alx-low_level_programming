@@ -77,8 +77,9 @@ size_t print_listint_safe(const listint_t *head)
 	if (nodes == 0)
 	{
 		/* iterate through each node in the list, printing its address and value */
-		for (; head != NULL; nodes++)
+		while (head && head != NULL)
 		{
+			nodes++;
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 		}
