@@ -17,12 +17,12 @@ size_t free_listint_safe(listint_t **h)
 	 * between current node and next node
 	 */
 
-	if (!*h)
+	if (*h == NULL || h == NULL)
 		return (0);
 
 	list_len = 0;
 
-	for (; *h; list_len++)
+	for (; *h != NULL; list_len++)
 	{	/* calculate the difference in memory address */
 
 		diff = *h - (*h)->next;
