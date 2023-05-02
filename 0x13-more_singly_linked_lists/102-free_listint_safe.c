@@ -2,6 +2,7 @@
 
 /**
  * free_listint_safe -  a function that frees a listint_t list
+ * Discriptio: This function can free lists with a loop
  * @h: pointer to firdt node
  *
  * Return: the size of the list that was free’d
@@ -20,9 +21,7 @@ size_t free_listint_safe(listint_t **h)
 	if (*h == NULL || h == NULL)
 		return (0);
 
-	list_len = 0;
-
-	for (; *h != NULL; list_len++)
+	for (list_len = 0; *h != NULL; list_len++)
 	{	/* calculate the difference in memory address */
 
 		diff = *h - (*h)->next;
