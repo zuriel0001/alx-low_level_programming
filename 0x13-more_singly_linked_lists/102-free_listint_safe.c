@@ -18,7 +18,7 @@ size_t free_listint_safe(listint_t **h)
 	 * between current node and next node
 	 */
 
-	if (*h == NULL || h == NULL)
+	if (h == NULL || *h == NULL)
 		return (0);
 
 	for (list_len = 0; *h != NULL; list_len++)
