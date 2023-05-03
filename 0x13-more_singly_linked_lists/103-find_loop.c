@@ -20,10 +20,11 @@ listint_t *find_listint_loop(listint_t *head)
 	each_node = head;
 	double_jump = head;
 
-	for (; each_node && double_jump && double_jump->next;
-		double_jump = double_jump->next->next,
-		each_node = each_node->next)
+	for (; each_node && double_jump && double_jump->next;)
 	{
+		double_jump = double_jump->next->next;
+		each_node = each_node->next;
+
 		if (double_jump == each_node)
 		{
 
