@@ -29,7 +29,7 @@ listint_t *find_listint_loop(listint_t *head)
 		{
 
 			each_node = head;
-			while (each_node != head)
+			while (each_node != double_jump)
 			{
 				each_node = each_node->next;
 				double_jump = double_jump->next;
