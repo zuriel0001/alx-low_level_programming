@@ -19,14 +19,14 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int bits_in_common;
 
 	index = 63;
-	exclusive = n ^ m;
-	count = 0;
+	bits_in_common = n ^ m;
+	bit_count = 0;
 
 	while (index >= 0)
 	{
-		current_bit = bits_in_common >> i;
+		current_bit = bits_in_common >> index;
 
-		if (current & 1)
+		if (current_bit & 1)
 			bit_count++;
 
 		index--;
