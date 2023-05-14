@@ -4,7 +4,7 @@
  *
  * @c: characters
  *
- * Return: 1 for lowercase, 0 for uppercase
+ * Return: 1 if c is alphabetic, otherwise 0
  */
 int _isalpha(int c)
 {
