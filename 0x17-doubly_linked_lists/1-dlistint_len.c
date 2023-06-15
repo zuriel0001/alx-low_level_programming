@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* print_dlistint - function that return all the elements of a dlistint_t list
+* dlistint_len - function that return all the elements of a dlistint_t list
 *
 * @h: pointer to the head of list
 *
