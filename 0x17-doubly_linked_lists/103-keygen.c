@@ -28,10 +28,10 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
     {
         case 3:
             tmp += argv[1][i++];
-            [[fallthrough]];
+            /* fallthrough */
         case 2:
             tmp += argv[1][i++];
-            [[fallthrough]];
+            /* fallthrough*/
         case 1:
             tmp += argv[1][i++];
     }
@@ -43,10 +43,10 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
     {
         case 3:
             tmp *= argv[1][i++];
-            [[fallthrough]];
+            /* fallthrough */
         case 2:
             tmp *= argv[1][i++];
-            [[fallthrough]];
+            /* fallthrough */
         case 1:
             tmp *= argv[1][i++];
     }
@@ -60,12 +60,12 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
             if (argv[1][i] > tmp)
                 tmp = argv[1][i];
             i++;
-            [[fallthrough]];
+            /* fallthrough */
         case 2:
             if (argv[1][i] > tmp)
                 tmp = argv[1][i];
             i++;
-            [[fallthrough]];
+            /* fallthrough */
         case 1:
             if (argv[1][i] > tmp)
                 tmp = argv[1][i];
@@ -80,11 +80,11 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
         case 3:
             tmp += (argv[1][i] * argv[1][i]);
             i++;
-            [[fallthrough]];
+            /* fallthrough */
         case 2:
             tmp += (argv[1][i] * argv[1][i]);
             i++;
-            [[fallthrough]];
+            /* fallthrough */
         case 1:
             tmp += (argv[1][i] * argv[1][i]);
     }
@@ -96,11 +96,11 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
         case 3:
             tmp = rand();
             i++;
-            [[fallthrough]];
+            /* fallthrough */
         case 2:
             tmp = rand();
             i++;
-            [[fallthrough]];
+            /* fallthrough */
         case 1:
             tmp = rand();
     }
