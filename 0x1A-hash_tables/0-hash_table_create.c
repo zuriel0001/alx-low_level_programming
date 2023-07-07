@@ -15,7 +15,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	table = malloc(sizeof(hash_table_t)); /* Allocate memory for the hash table */
 	if (table == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
 		return (NULL);
+	}
 
 	table->size = size; /* Set the size of the hash table */
 
@@ -23,7 +26,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	table->array = malloc(sizeof(hash_node_t *) * size);
 
 	if (table->array == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
 		return (NULL);
+	}
+
 	i = 0;
 	while (i < size)
 	{
