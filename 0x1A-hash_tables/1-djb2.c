@@ -9,13 +9,13 @@
 
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned long int cal_hash; /*  stores the calculated hash */
-	int c;  /* Variable to store each character of the string */
+    unsigned long int hash;
+    int c;
 
-	cal_hash = 5381;
-
-	while ((c = *str++))
-		cal_hash = ((cal_hash << 5) + cal_hash) + c; /* hash * 33 + c */
-
-	return (cal_hash);
+    hash = 5381;
+    while ((c = *str++))
+    {
+        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+    }
+    return (hash);
 }
