@@ -6,7 +6,7 @@
  *
  * @key: The key index of interest
  * @size: The size of the array of the hash table.
- * 
+ *
  * Description: the function uses the  djb2 algorithm
  *
  * Return: The index of the key.
