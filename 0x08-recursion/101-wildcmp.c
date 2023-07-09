@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * wildcmp - Compare two strings with a special character.
  * @s1: The first string to be compared.
@@ -5,6 +7,7 @@
  *
  * Return: 1 if the strings can be considered identical, 0 otherwise.
  */
+
 int wildcmp(char *s1, char *s2)
 {
     /* Base case: If both strings are empty, they are identical */
