@@ -4,13 +4,14 @@
 
 
 /**
- * find_len - Finds the length of a string.
- * @str: The string to be measured.
+ * len_finder - function that finds the length of a string
+ *
+ * @str: pointer to string to be measured
  *
  * Return: The length of the string.
  */
 
-int find_len(char *str)
+int len_finder(char *str)
 {
 	int len = 0;
 
@@ -32,17 +33,21 @@ int find_len(char *str)
 char *create_xarray(int size)
 {
 	char *array;
-	int index;
+	int i;
 
 	array = malloc(sizeof(char) * size);
 
 	if (array == NULL)
 		exit(98);
 
-	for (index = 0; index < (size - 1); index++)
-		array[index] = 'x';
+	i = 0;
+	while (i < (size - 1))
+	{
+		array[i] = 'x';
 
-	array[index] = '\0';
+		i++;
+	}
+	array[i] = '\0';
 
 	return (array);
 }
@@ -54,6 +59,7 @@ char *create_xarray(int size)
  *
  * Return: A pointer to the next non-zero element.
  */
+
 char *iterate_zeroes(char *str)
 {
 	while (*str && *str == '0')
@@ -68,12 +74,15 @@ char *iterate_zeroes(char *str)
  *
  * Description: If c is a non-digit, the function
  *              exits with a status of 98.
+ *
  * Return: The converted int.
  */
+
 int get_digit(char c)
 {
-	int digit = c - '0';
+	int digit;
 
+	digit = c - '0';
 	if (digit < 0 || digit > 9)
 	{
 		printf("Error\n");
@@ -84,8 +93,9 @@ int get_digit(char c)
 }
 
 /**
- * get_prod - Multiplies a string of numbers by a single digit.
- * @prod: The buffer to store the result.
+ * str_pdt - Multiplies a string of numbers by a single digit.
+ *
+ * @buff: pointer to buffer to store the result.
  * @mult: The string of numbers.
  * @digit: The single digit.
  * @zeroes: The necessary number of leading zeroes.
@@ -93,28 +103,28 @@ int get_digit(char c)
  * Description: If mult contains a non-digit, the function
  *              exits with a status value of 98.
  */
-void get_prod(char *prod, char *mult, int digit, int zeroes)
+void str_pdt(char *buff, char *mult, int digit, int zeroes)
 {
 	int mult_len, num, tens = 0;
 
-	mult_len = find_len(mult) - 1;
+	mult_len = len_finder(mult) - 1;
 	mult += mult_len;
 
-	while (*prod)
+	while (*buff)
 	{
-		*prod = 'x';
-		prod++;
+		*buff = 'x';
+		buff++;
 	}
 
-	prod--;
+	buff--;
 
 	while (zeroes--)
 	{
-		*prod = '0';
-		prod--;
+		*buff = '0';
+		buff--;
 	}
 
-	for (; mult_len >= 0; mult_len--, mult--, prod--)
+	for (; mult_len >= 0; mult_len--, mult--, buff--)
 	{
 		if (*mult < '0' || *mult > '9')
 		{
@@ -124,16 +134,17 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 
 		num = (*mult - '0') * digit;
 		num += tens;
-		*prod = (num % 10) + '0';
+		*buff = (num % 10) + '0';
 		tens = num / 10;
 	}
 
 	if (tens)
-		*prod = (tens % 10) + '0';
+		*buff = (tens % 10) + '0';
 }
 
 /**
  * add_nums - Adds the numbers stored in two strings.
+ *
  * @final_prod: The buffer storing the running final product.
  * @next_prod: The next product to be added.
  * @next_len: The length of next_prod.
@@ -159,7 +170,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 		next_len--;
 	}
 
-	for (; next_len >= 0 && *next_prod != 'x'; next_len--)
+	while (next_len >= 0 && *next_prod != 'x')
 	{
 		num = (*next_prod - '0');
 		num += tens;
@@ -168,6 +179,8 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 
 		final_prod--;
 		next_prod--;
+
+		next_len--;
 	}
 
 	if (tens)
@@ -175,14 +188,14 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 }
 
 /**
- * main - Multiplies two positive numbers.
- * @argv: The number of arguments passed to the program.
- * @argc: An array of pointers to the arguments.
+ * main - a function that multiplies two positive numbers
  *
- * Description: If the number of arguments is incorrect or one number
- *              contains non-digits, the function exits with a status of 98.
+ * @argc: The number of arguments passed to the program.
+ * @argv: An array of pointers to the arguments.
+ *
  * Return: Always 0.
  */
+
 int main(int argc, char *argv[])
 {
 	char *final_prod, *next_prod;
@@ -204,14 +217,14 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	size = find_len(argv[1]) + find_len(argv[2]);
+	size = len_finder(argv[1]) + len_finder(argv[2]);
 	final_prod = create_xarray(size + 1);
 	next_prod = create_xarray(size + 1);
 
-	for (index = find_len(argv[2]) - 1; index >= 0; index--)
+	for (index = len_finder(argv[2]) - 1; index >= 0; index--)
 	{
 		digit = get_digit(*(argv[2] + index));
-		get_prod(next_prod, argv[1], digit, zeroes++);
+		str_pdt(next_prod, argv[1], digit, zeroes++);
 		add_nums(final_prod, next_prod, size - 1);
 	}
 	for (index = 0; final_prod[index]; index++)

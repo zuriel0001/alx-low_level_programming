@@ -18,7 +18,7 @@ int is_digit(char *s);
 
 
 /** 101-mul.c **/
-int find_len(char *str);
+int len_finder(char *str);
 char *create_xarray(int size);
 char *iterate_zeroes(char *str);
 void get_prod(char *prod, char *mult, int digit, int zeroes);
