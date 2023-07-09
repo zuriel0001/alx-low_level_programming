@@ -14,7 +14,7 @@ int word_len(char *str)
 {
 	int idx = 0, len = 0;
 
-	/* 
+	/**
 	 * iterates until it reaches the end of the string
 	 * or encounters a space character
 	 */
@@ -28,7 +28,7 @@ int word_len(char *str)
 }
 
 /**
- * count_words - Counts the number of words within a string.
+ * word_count - Counts the number of words within a string.
  *
  * @str: The string to be searched.
  *
@@ -38,8 +38,11 @@ int word_count(char *str)
 {
 	int idx = 0, wrd_count = 0, len = 0;
 
-	for (idx = 0; *(str + idx); idx++)
+	while (*(str + idx))
+	{
 		len++;
+		idx++;
+	}
 
 	for (idx = 0; idx < len; idx++)
 	{
@@ -54,18 +57,20 @@ int word_count(char *str)
 }
 
 /**
- * strtow - Splits a string into words.
+ * strtow - a function that splits a string into words.
+ *
  * @str: The string to be split.
  *
- * Return: If str = NULL, str = "", or the function fails - NULL.
+ * Return: NULL if !str, str = "", or the function fails
  *         Otherwise - a pointer to an array of strings (words).
  */
+
 char **strtow(char *str)
 {
 	char **strings;
-	int index = 0, words, w, letters, l;
+	int index = 0, words, w, letters, lts;
 
-	if (str == NULL || str[0] == '\0')
+	if (!str || str[0] == '\0')
 		return (NULL);
 
 	words = word_count(str);
@@ -73,7 +78,7 @@ char **strtow(char *str)
 		return (NULL);
 
 	strings = malloc(sizeof(char *) * (words + 1));
-	if (strings == NULL)
+	if (!strings)
 		return (NULL);
 
 	for (w = 0; w < words; w++)
@@ -94,10 +99,10 @@ char **strtow(char *str)
 			return (NULL);
 		}
 
-		for (l = 0; l < letters; l++)
-			strings[w][l] = str[index++];
+		for (lts = 0; lts < letters; lts++)
+			strings[w][lts] = str[index++];
 
-		strings[w][l] = '\0';
+		strings[w][lts] = '\0';
 	}
 	strings[w] = NULL;
 
