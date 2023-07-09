@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		printf("%.2x", opcode);
 
 		if (idx == bytes - 1)
-			continue;
+			break;
 
 		printf(" ");
 
