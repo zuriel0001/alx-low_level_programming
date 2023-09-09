@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char alpbt = ,a';
+	char alpbt = 'a';
 
 	while (alpbt >= 'a' && alpbt <= 'z')
 	{
