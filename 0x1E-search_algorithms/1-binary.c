@@ -37,7 +37,8 @@ int binary_search_recursive(int *array, size_t size, int value)
 
 	half_s++;
 
-	return (binary_search_recursive(array + half_s, size - half_s, value) + half_s);
+	return (binary_search_recursive(array + half_s, size - half_s, value)
+			+ half_s);
 }
 
 /**
