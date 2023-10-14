@@ -25,7 +25,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 
 	do {
 		prev = list;
-                j++;
+		j++;
 		idx = j * m;
 
 		while (list->next && list->index < idx)
